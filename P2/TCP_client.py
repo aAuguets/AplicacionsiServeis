@@ -9,15 +9,13 @@ socket_client= socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 try:
 	socket_client.connect((HOST,PORT))
 except:
-	print "Unabke to connect"
+	print "Unable to connect"
 	sys.exit()
 
 print "Conectado al servidor remoto, comienza el chat."
 while 1:
-	socket_list=[sys.stdin ,socket_client]
-	read_socket, _,_= select.select(socket_list,[],[])	
-	for sock in read_socket:
-		if socket== socket_client:
+	read_socket, _,_= select.select([sys.stdin ,socket_client],[],[])	
+		if read_socket[0] == socket_client[0]:
 			data=socket.recv(1024)
 			print "data=", str(data)
 			if not data:
