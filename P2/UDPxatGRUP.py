@@ -4,11 +4,6 @@
 # Adria Auguets i Pavel Macutela
 #! /usr/bin/env python
 
-# Client and server for udp (datagram) echo.
-#
-# Usage: udpecho -s [port]            (to start a server)
-# or:    udpecho -c host [port] <file (client)
-
 import sys, select
 from socket import *
 
@@ -28,8 +23,8 @@ def main():
 
 def usage():
 	sys.stdout = sys.stderr
-	print 'Usage: udpecho -s [port]            (server)'
-	print 'or:    udpecho -c host [port] <file (client)'
+	print 'Usage: udpecho -s [port]   	(server)'
+	print 'or:    udpecho -c [IP] 		(client)'
 	sys.exit(2)
 
 def server():
@@ -39,12 +34,12 @@ def server():
 		port = ECHO_PORT
 	s = socket(AF_INET, SOCK_DGRAM)
 	s.bind(('', port))
-	print 'udp echo server ready'
+	print 'Server Preparat.'
 	while 1:
 		data, addr = s.recvfrom(BUFSIZE)
 		if addr not in CLIENTS:
 			CLIENTS.append(addr)
-		print 'client received from', addr, "->", data
+		print 'Client received from', addr, "->", data
 		for i in range(len(CLIENTS)):
 			if CLIENTS[i] != addr:
 				s.sendto(str(addr)+':'+data, CLIENTS[i])
@@ -58,7 +53,7 @@ def client():
 	addr = host, port
 	s = socket(AF_INET, SOCK_DGRAM)
 	s.bind(('', 0))
-	print 'udp echo client ready, reading stdin'
+	print 'Client preparat.'
 
 	while 1:
 		read, _, _ = select.select([sys.stdin, s], [], [])
@@ -73,11 +68,5 @@ def client():
 			txt, addr = s.recvfrom(BUFSIZE)
 
 			print addr, "->", txt
-        #line = sys.stdin.readline()
-        #if not line:
-        #    break
-        #s.sendto(line, addr)
-        #data, addr = s.recvfrom(BUFSIZE)
-        #print 'client received from', addr, "->", data
-
+        
 main()
