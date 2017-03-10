@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Xat usant UDP
+# Xat usant TCP
 # Adria Auguets i Pavel Macutela
 
 import socket, sys, select, struct, signal
@@ -47,9 +47,9 @@ def selectServer(data):
     global List
     read, _ , _ = select.select(data, [], [])
     if read[0] == data[0]:
-        sk, addr = data[0].accept()
-        if sk not in List:
-        	List += [sk]
+        socketc, addr = data[0].accept()
+        if socketc not in List:
+        	List += [socketc]
         	print "Conexio realitzada amb :", addr, "correctament."
     else:
         for element in range(len(read)):
