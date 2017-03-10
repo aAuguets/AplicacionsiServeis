@@ -5,7 +5,7 @@
 
 import socket, sys, select, struct, signal
 port = 5000
-host = '10.193.6.116'
+host = '10.192.107.42'
 
 List = []
 s = None 
@@ -19,8 +19,8 @@ def signal_handlerClient(signal, frame):
 def signal_handlerServer(signal, frame):
     global List
     print 'Desconectant desde el Servidor'
-    #signal_handlerClient()
-    socket.close()
+    for socket in List:
+        socket.close()
 
     sys.exit(0)
 
@@ -32,7 +32,7 @@ def selectClient(data, user):
         data[1].send(user+':'+txt)
     elif read[0] == data[1]:
         txt = data[1].recv(1024)
-        if '.exit' in txt:
+        if txt == '':
             data[1].close()
             sys.exit(0)
         c=0
@@ -54,7 +54,7 @@ def selectServer(data):
     else:
         for element in range(len(read)):
             txt = read[element].recv(1024)
-            if txt == '.exit':
+            if txt == '':
                 print "Client Desconectat."
                 read[element].close()
                 List.remove(read[element])
