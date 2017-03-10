@@ -66,7 +66,11 @@ def client():
 				s.sendto(txt, addr)
 		elif read[0] == s:
 			txt, addr = s.recvfrom(BUFSIZE)
-
-			print addr, "->", txt
+			i=0
+			for e in txt:
+				if e == ':':
+					break
+				i+=1
+			print txt[:i], "->", txt[i+1:]
         
 main()
