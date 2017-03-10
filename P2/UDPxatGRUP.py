@@ -47,16 +47,14 @@ def server():
 		print 'client received from', addr, "->", data
 		for i in range(len(CLIENTS)):
 			if CLIENTS[i] != addr:
-				s.sendto(data, CLIENTS[i])
+				s.sendto(str(addr)+':'+data, CLIENTS[i])
 
 def client():
 	if len(sys.argv) < 3:
 		usage()
 	host = sys.argv[2]
-	if len(sys.argv) > 3:
-		port = eval(sys.argv[3])
-	else:
-		port = ECHO_PORT
+	
+	port = ECHO_PORT
 	addr = host, port
 	s = socket(AF_INET, SOCK_DGRAM)
 	s.bind(('', 0))
@@ -73,6 +71,7 @@ def client():
 				s.sendto(txt, addr)
 		elif read[0] == s:
 			txt, addr = s.recvfrom(BUFSIZE)
+
 			print addr, "->", txt
         #line = sys.stdin.readline()
         #if not line:
