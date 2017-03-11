@@ -47,14 +47,14 @@ def selectServer(data):
     global dClients
     global List
     global nclients
-    read, _ , _ = select.select(data, [], [])
-    if read[0] == data[0]: #nou client
-        socketc, addr = data[0].accept()
+    read, _ , _ = select.select(data+dClients.values(), [], [])
+    if read[0] == data[1]: #nou client
+        socketc, addr = data[1].accept()
         dClients["Client"+str(nclients)]=socketc
         print "Conexio realitzada amb :", addr, "correctament.\nAssignat com a Client", nclients
         nclients +=1
     
-    elif read[0] == data[1]: #teclat
+    elif read[0] == data[0]: #teclat
         msg = sys.stdin.readline()
         toClient = msg.split(':')
         if len(toClient)==1:
@@ -65,14 +65,15 @@ def selectServer(data):
             else:
                 print "Client Desconegut."
     else: #msg in
-        txt = read[element].recv(1024)
-        num_client = posicio_dClients(dClients, read)
-        if txt == '':
-            print "Client", num_client, "Desconectat."
-            del dClients[num_client]
-            read.close()
-        else:
-            print "Client", num_client, ":", txt
+        for element in range(len(read)):
+            txt = read[element].recv(1024)
+            num_client = posicio_dClients(dClients, read)
+            if txt == '':
+                print "Client", num_client, "Desconectat."
+                del dClients[num_client]
+                read.close()
+            else:
+                print "Client", num_client, ":", txt
             
 
 def setupServer(port, host):
@@ -103,9 +104,8 @@ elif (sys.argv[1] == '-s'):
     host = sys.argv[2]
     port = int(sys.argv[3])
     signal.signal(signal.SIGINT, signal_handlerServer)
-    List = []
-    setupServer(port, host)
     List += [sys.stdin]
+    setupServer(port, host)
     while(True):
         selectServer(List)
 else:
