@@ -4,12 +4,12 @@
 # Adria Auguets i Pavel Macutela
 
 import socket, sys, select, struct, signal
-port = 10000
-host = '192.168.1.199'#'10.192.225.4'#'10.192.33.172'#'10.192.107.42'
-
+port = 5000         #per defecte.
+host = '127.0.0.1'  #per defecte.    #'10.192.225.4'#'10.192.33.172'#'10.192.107.42'
+dClients = {}
 List = []
 s = None 
-
+nclients = 0
 def signal_handlerClient(signal, frame):
     global s
     print '  Ctrl+c : Desconectant...'
@@ -24,37 +24,55 @@ def signal_handlerServer(signal, frame):
 
     sys.exit(0)
 
+def posicio_dClients(dC, read):
+    for i in dC.keys():
+        if dC[i] == read:
+            return i
 
-def selectClient(data, user):
+
+def selectClient(data):
     read, _ , _ = select.select(data, [], [])
-    if read[0] == data[0]:
+    if read[0] == data[0]: #teclat
         txt = sys.stdin.readline()
         data[1].send(txt)
-    elif read[0] == data[1]:
+    elif read[0] == data[1]: #msg in
         txt = data[1].recv(1024)
         if txt == '':
+            print "Servidor Desconectat."
             data[1].close()
             sys.exit(0)
         print "Received from Server ->", txt
         
 def selectServer(data):
+    global dClients
     global List
+    global nclients
     read, _ , _ = select.select(data, [], [])
-    if read[0] == data[0]:
+    if read[0] == data[0]: #nou client
         socketc, addr = data[0].accept()
-        if socketc not in List:
-        	List += [socketc]
-        	print "Conexio realitzada amb :", addr, "correctament.\nAssignat com a Client", List.index(socketc)
-    else:
-        for element in range(len(read)):
-            txt = read[element].recv(1024)
-            if txt == '':
-                print "Client", List.index(read[element]), "Desconectat."
-                read[element].close()
-                List.remove(read[element])
-            for e in range(1, len(data)):
-                if read[element] != data[e]: #reenviem a tots si no son el que ha enviat el msg
-                    data[e].send(txt)
+        dClients["Client"+str(nclients)]=socketc
+        print "Conexio realitzada amb :", addr, "correctament.\nAssignat com a Client", nclients
+        nclients +=1
+    
+    elif read[0] == data[1]: #teclat
+        msg = sys.stdin.readline()
+        toClient = msg.split(':')
+        if len(toClient)==1:
+            print "Err: Format-> ClientNUM:MSG"
+        else:
+            if toClient[0] in dClients.keys():
+                dClients[toClient[0]].send(toClient[1])
+            else:
+                print "Client Desconegut."
+    else: #msg in
+        txt = read[element].recv(1024)
+        num_client = posicio_dClients(dClients, read)
+        if txt == '':
+            print "Client", num_client, "Desconectat."
+            del dClients[num_client]
+            read.close()
+        else:
+            print "Client", num_client, ":", txt
             
 
 def setupServer(port, host):
@@ -80,15 +98,16 @@ if (sys.argv[1] == '-c'):
     List = [sys.stdin]
     setupClient(port, host)
     while(True):
-        selectClient(List, sys.argv[2])
+        selectClient(List)
 elif (sys.argv[1] == '-s'):
     host = sys.argv[2]
     port = int(sys.argv[3])
     signal.signal(signal.SIGINT, signal_handlerServer)
     List = []
     setupServer(port, host)
+    List += [sys.stdin]
     while(True):
         selectServer(List)
 else:
-    print "Servidor: $python TCPxat.py -s [host] [port]"
-    print "Servidor: $python TCPxat.py -s [host] [port]"
+    print "Servidor: $python TCPxatSC.py -s [host] [port]"
+    print "Client: $python TCPxatSC.py -c [host] [port]"
