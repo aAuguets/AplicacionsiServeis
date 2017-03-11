@@ -63,7 +63,7 @@ def selectServer(data):
         if ".CLIENTS" in msg:
             for c in info_clients.keys():
                 print c, "\n-------\nIP:  ", info_clients[c][0], "\nPORT:", info_clients[c][1], "\n=====================\n"
-        elif ".REPORT:" in msg:
+        elif ".SILENCE:" in msg:
             client = msg.split(':')
             reports += [client[1][:7]]
         elif ".LISTEN:" in msg:
