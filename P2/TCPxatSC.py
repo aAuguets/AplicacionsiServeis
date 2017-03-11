@@ -7,6 +7,7 @@ import socket, sys, select, struct, signal
 port = 5000         #per defecte.
 host = '127.0.0.1'  #per defecte.    #'10.192.225.4'#'10.192.33.172'#'10.192.107.42'
 dClients = {}
+info_clients={}
 List = []
 s = None 
 nclients = 0
@@ -51,13 +52,15 @@ def selectServer(data):
     if read[0] == data[1]: #nou client
         socketc, addr = data[1].accept()
         dClients["Client"+str(nclients)]=socketc
+        info_clients["Client"+str(nclients)]=addr
         print "NOVA Conexio realitzada...\nUsuari IP:", addr[0], "\nPORT:     ", addr[1],"\nAssignat com a Client", nclients, "\n"
         nclients +=1
     
     elif read[0] == data[0]: #teclat
         msg = sys.stdin.readline()
         if ".CLIENTS" in msg:
-            print dClients.keys()
+            for c in info_clients.keys():
+                print c, "\n-------\nIP:  ", info_clients[c][0], "\nPORT:", info_clients[c][1], "\n=====================\n"
         else:
             toClient = msg.split(':')
             if len(toClient)==1:
@@ -74,6 +77,7 @@ def selectServer(data):
             if txt == '':
                 print nom_client, "Desconectat."
                 del dClients[nom_client]
+                del info_clients[nom_client]
                 read[element].close()
             else:
                 print "Client", nom_client, ":", txt
