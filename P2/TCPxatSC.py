@@ -51,29 +51,32 @@ def selectServer(data):
     if read[0] == data[1]: #nou client
         socketc, addr = data[1].accept()
         dClients["Client"+str(nclients)]=socketc
-        print "Conexio realitzada amb :", addr, "correctament.\nAssignat com a Client", nclients
+        print "NOVA Conexio realitzada...\nUsuari IP:", addr[0], "\nPORT:     ", addr[1],"\nAssignat com a Client", nclients, "\n"
         nclients +=1
     
     elif read[0] == data[0]: #teclat
         msg = sys.stdin.readline()
-        toClient = msg.split(':')
-        if len(toClient)==1:
-            print "Err: Format-> ClientNUM:MSG"
+        if ".CLIENTS" in msg:
+            print dClients.keys()
         else:
-            if toClient[0] in dClients.keys():
-                dClients[toClient[0]].send(toClient[1])
+            toClient = msg.split(':')
+            if len(toClient)==1:
+                print "Err: Format-> ClientNUM:MSG"
             else:
-                print "Client Desconegut."
+                if toClient[0] in dClients.keys():
+                    dClients[toClient[0]].send(toClient[1])
+                else:
+                    print "Client Desconegut."
     else: #msg in
         for element in range(len(read)):
             txt = read[element].recv(1024)
-            num_client = posicio_dClients(dClients, read)
+            nom_client = posicio_dClients(dClients, read[element])
             if txt == '':
-                print "Client", num_client, "Desconectat."
-                del dClients[num_client]
-                read.close()
+                print nom_client, "Desconectat."
+                del dClients[nom_client]
+                read[element].close()
             else:
-                print "Client", num_client, ":", txt
+                print "Client", nom_client, ":", txt
             
 
 def setupServer(port, host):
