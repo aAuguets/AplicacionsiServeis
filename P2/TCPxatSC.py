@@ -8,6 +8,7 @@ port = 5000         #per defecte.
 host = '127.0.0.1'  #per defecte.    #'10.192.225.4'#'10.192.33.172'#'10.192.107.42'
 dClients = {}
 info_clients={}
+reports=[]
 List = []
 s = None 
 nclients = 0
@@ -48,6 +49,7 @@ def selectServer(data):
     global dClients
     global List
     global nclients
+    global reports
     read, _ , _ = select.select(data+dClients.values(), [], [])
     if read[0] == data[1]: #nou client
         socketc, addr = data[1].accept()
@@ -61,6 +63,13 @@ def selectServer(data):
         if ".CLIENTS" in msg:
             for c in info_clients.keys():
                 print c, "\n-------\nIP:  ", info_clients[c][0], "\nPORT:", info_clients[c][1], "\n=====================\n"
+        elif ".REPORT:" in msg:
+            client = msg.split(':')
+            reports += [client[1][:7]]
+        elif ".LISTEN:" in msg:
+            client = msg.split(':')
+            reports.remove(client[1][:7])
+
         else:
             toClient = msg.split(':')
             if len(toClient)==1:
@@ -80,7 +89,8 @@ def selectServer(data):
                 del info_clients[nom_client]
                 read[element].close()
             else:
-                print "Client", nom_client, ":", txt
+                if nom_client not in reports:
+                    print nom_client, ":", txt
             
 
 def setupServer(port, host):
