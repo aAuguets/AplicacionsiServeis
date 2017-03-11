@@ -1,0 +1,94 @@
+# -*- coding: utf-8 -*-
+
+# Xat usant TCP
+# Adria Auguets i Pavel Macutela
+
+import socket, sys, select, struct, signal
+port = 10000
+host = '192.168.1.199'#'10.192.225.4'#'10.192.33.172'#'10.192.107.42'
+
+List = []
+s = None 
+
+def signal_handlerClient(signal, frame):
+    global s
+    print '  Ctrl+c : Desconectant...'
+    s.close()
+    sys.exit(0)
+    
+def signal_handlerServer(signal, frame):
+    global List
+    print 'Desconectant desde el Servidor'
+    for socket in List:
+        socket.close()
+
+    sys.exit(0)
+
+
+def selectClient(data, user):
+    read, _ , _ = select.select(data, [], [])
+    if read[0] == data[0]:
+        txt = sys.stdin.readline()
+        data[1].send(txt)
+    elif read[0] == data[1]:
+        txt = data[1].recv(1024)
+        if txt == '':
+            data[1].close()
+            sys.exit(0)
+        print "Received from Server ->", txt
+        
+def selectServer(data):
+    global List
+    read, _ , _ = select.select(data, [], [])
+    if read[0] == data[0]:
+        socketc, addr = data[0].accept()
+        if socketc not in List:
+        	List += [socketc]
+        	print "Conexio realitzada amb :", addr, "correctament.\nAssignat com a Client", List.index(socketc)
+    else:
+        for element in range(len(read)):
+            txt = read[element].recv(1024)
+            if txt == '':
+                print "Client", List.index(read[element]), "Desconectat."
+                read[element].close()
+                List.remove(read[element])
+            for e in range(1, len(data)):
+                if read[element] != data[e]: #reenviem a tots si no son el que ha enviat el msg
+                    data[e].send(txt)
+            
+
+def setupServer(port, host):
+    global List
+    global s
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.bind((host,port))
+    s.listen(5)
+    List += [s]
+
+def setupClient(port, host):
+    global s
+    global List
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect((host,port))
+    List += [s]
+
+
+if (sys.argv[1] == '-c'):
+    host = sys.argv[2]
+    port = int(sys.argv[3])
+    signal.signal(signal.SIGINT, signal_handlerClient)
+    List = [sys.stdin]
+    setupClient(port, host)
+    while(True):
+        selectClient(List, sys.argv[2])
+elif (sys.argv[1] == '-s'):
+    host = sys.argv[2]
+    port = int(sys.argv[3])
+    signal.signal(signal.SIGINT, signal_handlerServer)
+    List = []
+    setupServer(port, host)
+    while(True):
+        selectServer(List)
+else:
+    print "Servidor: $python TCPxat.py -s [host] [port]"
+    print "Servidor: $python TCPxat.py -s [host] [port]"
