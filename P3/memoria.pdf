@@ -1,0 +1,636 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
+1 0 obj
+<< /F1 2 0 R /F2 3 0 R /F3 4 0 R >>
+endobj
+2 0 obj
+<< /BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font >>
+endobj
+3 0 obj
+<< /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font >>
+endobj
+4 0 obj
+<< /BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font >>
+endobj
+5 0 obj
+<< /Contents 14 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 13 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
+  /Type /Page >>
+endobj
+6 0 obj
+<< /Contents 15 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 13 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
+  /Type /Page >>
+endobj
+7 0 obj
+<< /Contents 16 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 13 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
+  /Type /Page >>
+endobj
+8 0 obj
+<< /Outlines 10 0 R /PageLabels 17 0 R /PageMode /UseNone /Pages 13 0 R /Type /Catalog >>
+endobj
+9 0 obj
+<< /Author (Adri\340 Auguets i Pavel Macutela) /CreationDate (D:20170322201322-01'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20170322201322-01'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
+  /Subject (\(unspecified\)) /Title (Pr\340ctica 2: Servei de noms) /Trapped /False >>
+endobj
+10 0 obj
+<< /Count 2 /First 11 0 R /Last 12 0 R /Type /Outlines >>
+endobj
+11 0 obj
+<< /Dest [ 5 0 R /XYZ 62.69291 704.0236 0 ] /Next 12 0 R /Parent 10 0 R /Title (Objectiu) >>
+endobj
+12 0 obj
+<< /Dest [ 5 0 R /XYZ 62.69291 641.0236 0 ] /Parent 10 0 R /Prev 11 0 R /Title (T\340sques realitzades) >>
+endobj
+13 0 obj
+<< /Count 3 /Kids [ 5 0 R 6 0 R 7 0 R ] /Type /Pages >>
+endobj
+14 0 obj
+<< /Length 5246 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 741.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL 107.6649 0 Td (Pr\340ctica 2: Servei de noms) Tj T* -107.6649 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 716.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL 31.37937 0 Td (Authors:) Tj T* -31.37937 0 Td ET
+Q
+Q
+q
+1 0 0 1 91.03937 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Adri\340 Auguets i Pavel Macutela) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 683.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Objectiu) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 653.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 1.969983 Tw (L'objectiu d'aquesta pr\340ctica \351s realitzar un DNS, aix\355 com, configurar-lo i comprovar el seu correcte) Tj T* 0 Tw (funcionament. Per duur a terme aquesta pr\340ctica hem utilitzat el servei Bind9.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 620.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (T\340sques realitzades) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 566.0236 cm
+q
+BT 1 0 0 1 0 38 Tm 2.576098 Tw 12 TL /F1 10 Tf 0 0 0 rg (Primer de tot hem creat un parell de m\340quines virtuals noves. A cada una li posarem una IP per) Tj T* 0 Tw .446651 Tw (distingir-les i per poder introduir-les al VPN de l'assignatura, les anomenarem amb la ip 172.20.7.4 \(DNS) Tj T* 0 Tw 2.604269 Tw (prim\340ria\) i 172.20.7.5 \(DNS Secundaria\). Primer crearem el DNS primari a la m\340quina primaria \(ip) Tj T* 0 Tw (172.20.7.4\). 1\) /var/lib/lxc/) Tj (<) Tj (NOMCONTAINER) Tj (>) Tj (/config) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 560.0236 cm
+Q
+q
+1 0 0 1 62.69291 370.8236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 2 Tm  T* ET
+q
+1 0 0 1 20 165.2 cm
+q
+BT 1 0 0 1 0 14 Tm 1.092126 Tw 12 TL /F1 10 Tf 0 0 0 rg (Hem modificat aquest fitxer dins de la maquina mare per tal que el container <) Tj (NOMCONTAINER) Tj (>) Tj T* 0 Tw (obtingui la IP esperada. Per exemple el de la nostre maquina 1 ha quedat aix\355.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 0 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 448.6898 156 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 134 Tm /F3 10 Tf 12 TL (#Container specific configuration) Tj T* (lxc.rootfs = /var/lib/lxc/maquina1/rootfs) Tj T* (lxc.rootfs.backend = dir) Tj T* (lxc.utsname = maquina1) Tj T* (lxc.arch = amd64) Tj T* (#Network configuration) Tj T* (lxc.network.type = veth) Tj T* (lxc.network.link = lxcbr0) Tj T* (lxc.network.flags = up) Tj T* (lxc.network.ipv4 = 172.20.7.4/16) Tj T* (lxc.network.ipv4.gateway = auto) Tj T* (lxc.network.hwaddr = 00:16:3e:b1:08:0f) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 370.8236 cm
+Q
+q
+1 0 0 1 62.69291 364.8236 cm
+Q
+q
+1 0 0 1 62.69291 364.8236 cm
+Q
+q
+1 0 0 1 62.69291 229.6236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 120.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 5.66 0 Td (2.) Tj T* -5.66 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 120.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (/etc/network/interfaces) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 102.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Dins la maquina virtual, hem modificat l'arxiu interfaces i l'hem deixat d'aquesta manera:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 445.6898 96 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 74 Tm /F3 10 Tf 12 TL (# The loopback network interface) Tj T* (auto lo) Tj T* (iface lo inet loopback) Tj T*  T* (auto eth0) Tj T* (iface eth0 inet manual) Tj T* (dns-nameservers 127.0.0.1 172.20.6.4) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 223.6236 cm
+Q
+q
+1 0 0 1 62.69291 160.4236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 48.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 5.66 0 Td (3.) Tj T* -5.66 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 48.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (/etc/resolv.conf) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 30.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Farem que apunti a la xarxa local.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 445.6898 24 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (nameserver 127.0.0.1) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 154.4236 cm
+Q
+q
+1 0 0 1 62.69291 76.86614 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 62.55748 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 5.66 0 Td (4.) Tj T* -5.66 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 62.55748 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (/etc/bind/named.conf.local) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 44.55748 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Dins d'aquest fitxer definirem la nostra zona. Ho hem fet aix\355:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 -0.64252 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 442.6898 36 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F3 10 Tf 12 TL (zone "g7.asi.itic.cat" IN {) Tj T* (    type master;) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+Q
+Q
+ 
+endstream
+endobj
+15 0 obj
+<< /Length 4592 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 667.8236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 6 84.2 Tm  T* ET
+q
+1 0 0 1 23 -3 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 442.6898 96 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 74 Tm /F3 10 Tf 12 TL (    file "/etc/bind/db.g7.asi.itic.cat";) Tj T* (    allow-transfer {172.20.7.5;};) Tj T* (};) Tj T*  T* (// Consider adding the 1918 zones here, if they are not used in your) Tj T* (// organization) Tj T* (//include "/etc/bind/zones.rfc1918";) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 661.8236 cm
+Q
+q
+1 0 0 1 62.69291 362.6236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 284.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 5.66 0 Td (5.) Tj T* -5.66 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 284.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (/etc/bind/db.g7.asi.itic.cat) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 266.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Dins aquest fitxer creem la nostra taula de resoluci\363 de noms.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 53 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 445.6898 204 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 182 Tm /F3 10 Tf 12 TL ($TTL 5H) Tj T* (g7.asi.itic.cat.        IN      SOA     ns.g7.asi.itic.cat.) Tj T* (                                         adriiauguets@gmail.com. \() Tj T* (                        2014011201      ; serial) Tj T* (                        7200            ; Refresh) Tj T* (                        3600            ; Retry) Tj T* (                        1W              ; Expire) Tj T* (                        1W \)            ; Negative Cache TTL) Tj T* (;servidors de noms) Tj T* (g7.asi.itic.cat.        IN      NS      ns.g7.asi.itic.cat.) Tj T* (g7.asi.itic.cat.        IN      NS      ns2.g7.asi.itic.cat.) Tj T*  T* (;Registres A) Tj T* (ns.g7.asi.itic.cat.     IN      A       172.20.7.4) Tj T* (ns2.g7.asi.itic.cat.    IN      A       172.20.7.5) Tj T* (g7.asi.itic.cat.        IN      A       172.20.7.6) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 23 15 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .927318 Tw (En aquesta taula definim de moment nomes els Registres A per tal que aquests noms responguin) Tj T* 0 Tw (amb l'adre\347a de la maquina esperada.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Un cop feta aquesta configuraci\363 nom\351s queda definir el DNS secundari, ip 172.20.7.5 .) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 356.6236 cm
+Q
+q
+1 0 0 1 62.69291 203.4236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 138.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 5.66 0 Td (6.) Tj T* -5.66 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 138.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (DNS Secundari. /etc/bind/named.conf.local Hem de canviar uns noms a diferencia del fitxer del dns) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 445.6898 132 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 110 Tm /F3 10 Tf 12 TL (zone "g7.asi.itic.cat" IN {) Tj T* (   type slave;) Tj T* (   file "db.g7.asi.itic.cat";) Tj T* (   masters {172.20.7.4;) Tj T* (   };) Tj T* (};) Tj T*  T* (// Consider adding the 1918 zones here, if they are not used in your) Tj T* (// organization) Tj T* (//include "/etc/bind/zones.rfc1918";) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 197.4236 cm
+Q
+q
+1 0 0 1 62.69291 76.86614 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 105.5575 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 5.66 0 Td (7.) Tj T* -5.66 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 105.5575 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (/etc/bind/db.g7.asi.itic.cat) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 87.55748 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Per lo tant la resolucio de noms del DNS secundari quedar\340 de la seg\374ent manera:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 6.35748 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 442.6898 72 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 50 Tm /F3 10 Tf 12 TL (   $TTL 1w) Tj T* (   g7.asi.itic.cat         IN      SOA     ns.g7.asi.itic.cat) Tj T* (                                           pavel.macutela1@gmail.com.\() Tj T* (                           2013021201      ;serial) Tj T* (                           2h              ;refresh) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+Q
+Q
+ 
+endstream
+endobj
+16 0 obj
+<< /Length 2951 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 607.8236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 6 144.2 Tm  T* ET
+q
+1 0 0 1 23 -3 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 442.6898 156 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 134 Tm /F3 10 Tf 12 TL (                           1h              ;retry) Tj T* (                           1w              ;Expire) Tj T* (                           1w \)            ; Negative cache TTL) Tj T*  T* (;servidor de noms) Tj T* (g7.asi.itic.cat.        IN      NS      ns.g7.asi.itic.cat.) Tj T* (g7.asi.itic.cat.        IN      NS      ns2.g7.asi.itic.cat.) Tj T*  T* (;Registros A) Tj T* (ns                      IN      A       172.20.7.4) Tj T* (ns2                     IN      A       172.20.7.5) Tj T* (g7.asi.itic.cat         IN      A       172.20.7.6) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 601.8236 cm
+Q
+q
+1 0 0 1 62.69291 268.6236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 318.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 5.66 0 Td (8.) Tj T* -5.66 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 318.2 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (Des de la maquina 170.20.7.5 executem la comanda: ) Tj /F2 10 Tf (dig ns.g7.asi.itic.cat ) Tj /F1 10 Tf (y el resultat obtingut es:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 445.6898 312 re B*
+Q
+q
+BT 1 0 0 1 0 290 Tm 12 TL /F3 10 Tf 0 0 0 rg (; ) Tj (<) Tj (<) Tj (>) Tj (>) Tj ( DiG 9.10.3-P4-Ubuntu ) Tj (<) Tj (<) Tj (>) Tj (>) Tj ( ns.g7.asi.itic.cat) Tj T* (;; global options: +cmd) Tj T* (;; Got answer:) Tj T* (;; -) Tj (>) Tj (>) Tj (HEADER) Tj (<) Tj (<) Tj (- opcode: QUERY, status: NOERROR, id: 5654) Tj T* (;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 2, ADDITIONAL: 2) Tj T*  T* (;; OPT PSEUDOSECTION:) Tj T* (; EDNS: version: 0, flags:; udp: 4096) Tj T* (;; QUESTION SECTION:) Tj T* (;ns.g7.asi.itic.cat.            IN      A) Tj T*  T* (;; ANSWER SECTION:) Tj T* (ns.g7.asi.itic.cat.     18000   IN      A       172.20.7.4) Tj T*  T* (;; AUTHORITY SECTION:) Tj T* (g7.asi.itic.cat.        18000   IN      NS      ns.g7.asi.itic.cat.) Tj T* (g7.asi.itic.cat.        18000   IN      NS      ns2.g7.asi.itic.cat.) Tj T*  T* (;; ADDITIONAL SECTION:) Tj T* (ns2.g7.asi.itic.cat.    18000   IN      A       172.20.7.5) Tj T*  T* (;; Query time: 94 msec) Tj T* (;; SERVER: 172.20.7.4#53\(172.20.7.4\)) Tj T* (;; WHEN: Wed Mar 22 19:01:24 UTC 2017) Tj T* (;; MSG SIZE  rcvd: 111) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 268.6236 cm
+Q
+q
+1 0 0 1 62.69291 238.6236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 2.008221 Tw (Dig retorna el resultat esperat, per lo tant podem donat per finalitzada la pr\340ctrica y el seu correcte) Tj T* 0 Tw (funcionament) Tj T* ET
+Q
+Q
+ 
+endstream
+endobj
+17 0 obj
+<< /Nums [ 0 18 0 R 1 19 0 R 2 20 0 R ] >>
+endobj
+18 0 obj
+<< /S /D /St 1 >>
+endobj
+19 0 obj
+<< /S /D /St 2 >>
+endobj
+20 0 obj
+<< /S /D /St 3 >>
+endobj
+xref
+0 21
+0000000000 65535 f
+0000000075 00000 n
+0000000129 00000 n
+0000000239 00000 n
+0000000354 00000 n
+0000000462 00000 n
+0000000671 00000 n
+0000000880 00000 n
+0000001089 00000 n
+0000001197 00000 n
+0000001520 00000 n
+0000001597 00000 n
+0000001709 00000 n
+0000001835 00000 n
+0000001910 00000 n
+0000007213 00000 n
+0000011862 00000 n
+0000014870 00000 n
+0000014932 00000 n
+0000014969 00000 n
+0000015006 00000 n
+trailer
+<< /ID 
+ % ReportLab generated PDF document -- digest (http://www.reportlab.com)
+ [(P\014\316\230$\332+\014,yS\313N$R\234) (P\014\316\230$\332+\014,yS\313N$R\234)]
+ /Info 9 0 R /Root 8 0 R /Size 21 >>
+startxref
+15043
+%%EOF
