@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="estil.css">
+  <meta charset='utf-8'>
+    <title>G7 Formulari</title>
+  </head>
+    <script>
+   function check(input) {
+    if (input.value != document.getElementById("pwd").value) {
+     input.setCustomValidity("La contrasenya ha de ser la mateixa!");
+    } else{
+     // input is valid -- reset the error message
+     input.setCustomValidity("");
+     }
+   }
+   </script>
+    <body>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="membres.html">Membres</a></li>
+      <li><a href="interes.html">Webs d'Interés</a></li>
+      <li><a href="fotos.html">Fotos</a></li>
+      <li><a href="formulari.html">Solicitud d'amistat</a></li>
+      <li><a href="javascript.html">Javascript</a></li>
+    </ul>
+    <h1>Solicitud d'Amistat</h1>
+    <center>
+    <form id="Solicitud d'amistat" action="" method="">
+    <br>
+    <label>Nom i Cognoms :        </label>
+    <input name="Nom d’usuari" id="nom_usuari" type="text"
+     required="required"/>
+    <br>
+    <label>Contrasenya personal:         </label>
+    <input name="pwd" id="pwd" type="password"
+     required="required"/>
+    <br>
+    <label>Repetir Contrasenya: </label>
+    <input name="Repeticio_pwd" id="rep_pwd" type="password"
+     oninput="check(this)"/>
+    <br>
+    <label>Correu Electrònic  : </label>
+    <input name="correu" id="correu_electronic" list="correu" type="email"
+    required="required"/>
+    <br>
+    <label>Sexe:                </label>
+    <select name = "genere">
+      <option value="Dona">Dona</option>
+      <option value="Home">Home</option>
+    </select>
+   <br>
+   <label>Commentaris:          </label>
+   <br>
+   <textarea name="comments" id="comments" cols="25" rows="3"></textarea>
+   <br>
+   <br>
+   <input type="submit" value="Enviar" id="boto_enviar"/>
+   <input type="reset" value="Esborrar" id="boto_reset"/>
+  </center>
+  </form>
+  </body>
+</html>

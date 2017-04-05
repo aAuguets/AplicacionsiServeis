@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="estil.css">
+  <meta charset='utf-8'>
+<TITLE>Programa Javascript</TITLE>
+</head>
+
+<body>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="membres.html">Membres</a></li>
+    <li><a href="interes.html">Webs d'Interés</a></li>
+    <li><a href="fotos.html">Fotos</a></li>
+    <li><a href="formulari.html">Solicitud d'amistat</a></li>
+    <li><a href="javascript.html">Javascript</a></li>
+  </ul>
+<h1 id="myDiv" style="color:blue"> Hola!!!!!!
+</h1>
+<button class="center" type="button" onclick="FuncioTest()">Traduir</button>
+<p id="test"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mi leo, iaculis vel ante eget, vehicula venenatis arcu. Donec dapibus erat quis purus gravida iaculis. Nunc dignissim mi nulla, in ullamcorper erat sollicitudin at. Sed non orci dui. Maecenas vulputate augue eget nisl posuere, vitae varius magna posuere. Nulla molestie dignissim leo, nec tristique purus auctor et. Ut magna ex, efficitur eu enim consectetur, blandit pharetra nibh. Proin tempor libero at ligula convallis aliquam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer in fermentum libero. Cras cursus mi ac orci rutrum, a tincidunt dolor varius. Proin et varius magna. Etiam gravida semper erat quis tristique. Suspendisse gravida eros ipsum, porta dictum sapien convallis ac. Proin dapibus sit amet nisi ac pellentesque. Vestibulum eget neque vitae justo feugiat interdum ac a justo. </p>
+<script>
+setInterval("loadXMLDoc()",3000);
+</script>
+
+<script>
+var i;
+i = 1;
+function FuncioTest() {
+  if (i) {
+    i = 0;
+    document.getElementById("test").style.color = "#0000FF";
+    document.getElementById("test").innerHTML = "Ni tampoc hi ha ningú que estimi, persegueixi i vulgui assolir el dolor mateix perquè sigui dolor, sinó perquè de vegades es donen les circumstàncies de tal manera, que amb esforç i dolor pot obtenir algun gran plaer. En efecte, per anar a coses insignificants , qui de nosaltres assumeix algun exercici físic laboriós si no és per aconseguir algun avantatge d'ell? d'altra banda, qui censuraria amb raó a aquell que vol estar en un plaer al qual no segueixi cap molèstia, o aquell que fuig del dolor amb el qual no es produeix cap plaer? Però sens dubte acusem i jutgem com els més dignes d'un just avorriment a aquells que, estovats i corromputs per l'encant dels plaers presents, encegats pel desig, no preveuen els dolors i les molèsties que han de succeir-los, i estan a faltar semblant que abandonen els seus deures per debilitat d'esperit, és a dir, per fugir d'esforços i dolors. ";
+  } else {
+    i = 1;
+    document.getElementById("test").style.color = "#000000";
+    document.getElementById("test").innerHTML = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mi leo, iaculis vel ante eget, vehicula venenatis arcu. Donec dapibus erat quis purus gravida iaculis. Nunc dignissim mi nulla, in ullamcorper erat sollicitudin at. Sed non orci dui. Maecenas vulputate augue eget nisl posuere, vitae varius magna posuere. Nulla molestie dignissim leo, nec tristique purus auctor et. Ut magna ex, efficitur eu enim consectetur, blandit pharetlibero at ligula convallis aliquam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer in fermentum libero. Cras cursus mi ac orci rutrum, a tincidunt dolor varius. roin et varius magna. Etiam gravida semper erat quis tristique. Suspendisse gravida eros ipsum, porta dictum sapien convallis ac. Proin dapibus sit amet nisi ac pellentesque. Vestibulum eget neque vitae justo feugiat interdum ac a justo.";
+  }
+}
+function loadXMLDoc()
+{
+  var xmlhttp;
+  var objecte_div;
+  objecte_div=document.getElementById("myDiv");
+  xmlhttp=new XMLHttpRequest();
+  xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 /*&& xmlhttp.status==200*/)
+    {
+    if(xmlhttp.responseText==1){
+      objecte_div.style.color="green";
+    }
+    else {
+      objecte_div.style.color="blue";
+    }
+    }
+  }
+  xmlhttp.open("GET","entrada.txt",true);
+  xmlhttp.send();
+} </script>
+  </body>
+</html>

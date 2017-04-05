@@ -1,0 +1,105 @@
+h1  {
+    color: #200C86;
+    text-align: center;
+    font-family: verdana;
+    text-decoration: underline;
+    font-size: 300%;
+}
+h2 {
+  color: black;
+  font-family: sans-serif;
+  font-size: 180%;
+  padding-left: 4.2cm;
+}
+h2.membres {
+  padding-left: 9cm;
+}
+p {
+    font-family: sans-serif;
+    padding-left: 4cm;
+    padding-right: 4cm;
+  }
+
+p.p1 {
+  color: #200C86;
+  text-align: center;
+  font-size: 140%;
+}
+p.p2 {
+    color: black;
+    font-size: 120%;
+}
+p.nom{
+  color: black;
+  font-weight: bold;
+  font-size: 120%;
+}
+p.ndescripcio{
+  padding-left: 5cm;
+  font-size: 120%;
+  color: black;
+}
+body {
+  background-image: url("bg2.jpg");
+}
+label {
+  font-family: verdana;
+  font-size: 120%;
+}
+p.round{
+  border: 2px solid black;
+  border-radius: 8px;
+}
+img.center{
+  display: block;
+  margin: 0 auto;
+}
+figcaption.center{
+  text-align: center;
+}
+button.center{
+  display: block;
+  margin: 0 auto;
+}
+/* Menu de dalt*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: verdana;
+}
+
+li a:hover {
+    background-color: #111;
+}
+/*Taula de continguts*/
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
