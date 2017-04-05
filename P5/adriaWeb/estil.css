@@ -54,6 +54,13 @@ img.center{
   display: block;
   margin: 0 auto;
 }
+img.bottom{
+    margin: auto;
+    position: absolute;
+    left:0;right:0;
+    bottom: 0px;
+
+}
 figcaption.center{
   text-align: center;
 }
