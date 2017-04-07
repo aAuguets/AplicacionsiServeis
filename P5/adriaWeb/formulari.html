@@ -29,15 +29,15 @@
     <form id="Solicitud d'amistat" action="" method="">
     <br>
     <label>Nom i Cognoms :        </label>
-    <input name="Nom d’usuari" id="nom_usuari" type="text"
+    <input name="Nom d’usuari" id="nom_usuari" type="text" title = "sis o més caracters"
      required="required"/>
     <br>
     <label>Contrasenya personal:         </label>
-    <input name="pwd" id="pwd" type="password"
+    <input name="pwd" id="pwd" type="password" pattern=".{6,}" title= "sis o més caracters"
      required="required"/>
     <br>
     <label>Repetir Contrasenya: </label>
-    <input name="Repeticio_pwd" id="rep_pwd" type="password"
+    <input name="Repeticio_pwd" id="rep_pwd" type="password" pattern=".{6,}"
      oninput="check(this)"/>
     <br>
     <label>Correu Electrònic  : </label>
