@@ -1,44 +1,54 @@
-#include "serial_device.h"
+#include <inttypes.h>
 #include <avr/io.h>
+#include "serial_device.h"
 
-#define BAUD_RATE 9600
-#define CLK_BY100 F_CPU/100
-#define BDR 16*BAUD_RATE/100
-#define MYUBRR ((CLK_BY100/BDR)-1)
+#define NUM (F_CPU/16)
 
-void serial_init(void){
-  /* Set baud rate */
-  //UBRR0H = (uint8_t)MYUBRR>>8;
-  //UBRR0L = (uint8_t)MYUBRR;
-  UBRR0H=0;
-  UBRR0L=103;
+#define BAUDRATE_L(x) UINT8_C((NUM/x-1)      & 0xff)
+#define BAUDRATE_H(x) UINT8_C((NUM/x-1) >> 8 & 0xf)
 
-  /* arreglem el bit U2X0 */
-  UCSR0A &= ~_BV(U2X0);
+/*
+ * Initialize the UART0
+ */
+void serial_init(void) {
+  // set baud rate to 9600 bps. Ignore lower rates.
 
-  /* Enable receiver and transmitter */
-  UCSR0B |= _BV(TXEN0)|_BV(RXEN0);
+  UBRR0H = BAUDRATE_H(9600);
+  UBRR0L = BAUDRATE_L(9600);
+  // set normal baud rate
+  //UCSR0A = UINT8_C(0);
+  UCSR0A |= (_BV(UDRE0));
 
-  /* Set frame format: 8data, 1stop bit, no parity */
-  UCSR0C |=_BV(UCSZ00)|_BV(UCSZ01);
+  //UBRR0 = 16;
+  //UCSR0A |= (1<<U2X0);
+  UCSR0A &= ~(1<<U2X0);
+  UCSR0C = (_BV(UCSZ01) | _BV(UCSZ00));
+ /* UCSR0C =
+    (_BV(UCSZ01)   | _BV(UCSZ00)) &   // 8 bit frame
+    ~_BV(UMSEL01) & ~_BV(UMSEL00) &   // asincronous mode
+    ~_BV(UPM01)   & ~_BV(UPM00)   |   // no parity
+      _BV(USBS0)   ;                   // 1 stop bit
+  // Enable transmision and reception*/
+  UCSR0B = _BV(RXEN0) | _BV(TXEN0);
 }
 
-uint8_t serial_get(void){
-  /* Return the value of Data Register */
-  loop_until_bit_is_set(UCSR0A,RXC0)
-    ;
+
+uint8_t serial_get(void) {
+  // polling on RXC until data received
+  loop_until_bit_is_set(UCSR0A, RXC0);
   return UDR0;
 }
 
-void serial_put(uint8_t c){
-  /* Wait for Data Register Empty, 
-     before send new data */
-  loop_until_bit_is_set(UCSR0A,UDRE0)
-    ;
-  UDR0=c;
+
+bool serial_can_read(void) {
+  // test whether there is something to read
+  return bit_is_set(UCSR0A, RXC0);
 }
 
-bool serial_can_read(void){
-  /* return False if USART RX Not Complete */
-  return bit_is_set(UCSR0A,RXC0);
+
+void serial_put(uint8_t c) {
+  // wait last transmision finishes
+  loop_until_bit_is_set(UCSR0A, UDRE0);
+  // send new byte
+  UDR0 = c;
 }
