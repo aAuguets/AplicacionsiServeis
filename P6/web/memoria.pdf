@@ -1,0 +1,258 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
+1 0 obj
+<< /F1 2 0 R /F2 3 0 R /F3 4 0 R /F4 5 0 R >>
+endobj
+2 0 obj
+<< /BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font >>
+endobj
+3 0 obj
+<< /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font >>
+endobj
+4 0 obj
+<< /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font >>
+endobj
+5 0 obj
+<< /BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F4 /Subtype /Type1 /Type /Font >>
+endobj
+6 0 obj
+<< /Contents 14 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 13 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
+  /Type /Page >>
+endobj
+7 0 obj
+<< /Contents 15 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 13 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
+  /Type /Page >>
+endobj
+8 0 obj
+<< /Outlines 10 0 R /PageLabels 16 0 R /PageMode /UseNone /Pages 13 0 R /Type /Catalog >>
+endobj
+9 0 obj
+<< /Author (Adri\340 Auguets i Pavel Macutela) /CreationDate (D:20170421193036-01'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20170421193036-01'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
+  /Subject (\(unspecified\)) /Title (Pr\340ctica 5: Servei web) /Trapped /False >>
+endobj
+10 0 obj
+<< /Count 2 /First 11 0 R /Last 12 0 R /Type /Outlines >>
+endobj
+11 0 obj
+<< /Dest [ 6 0 R /XYZ 62.69291 704.0236 0 ] /Next 12 0 R /Parent 10 0 R /Title (Sinopsi) >>
+endobj
+12 0 obj
+<< /Dest [ 6 0 R /XYZ 62.69291 629.0236 0 ] /Parent 10 0 R /Prev 11 0 R /Title (Tasques) >>
+endobj
+13 0 obj
+<< /Count 2 /Kids [ 6 0 R 7 0 R ] /Type /Pages >>
+endobj
+14 0 obj
+<< /Length 4268 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 741.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL 129.3349 0 Td (Pr\340ctica 5: Servei web) Tj T* -129.3349 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 716.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL 31.37937 0 Td (Authors:) Tj T* -31.37937 0 Td ET
+Q
+Q
+q
+1 0 0 1 91.03937 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Adri\340 Auguets i Pavel Macutela) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 683.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Sinopsi) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 641.0236 cm
+q
+BT 1 0 0 1 0 26 Tm .621163 Tw 12 TL /F1 10 Tf 0 0 0 rg (Com a objectius d'aquesta practica s\363n entendre el servei web, usar ) Tj /F3 10 Tf (Apache ) Tj /F1 10 Tf (com a servidor web, fer us) Tj T* 0 Tw .92186 Tw (dels moduls ) Tj /F3 10 Tf (HTTPServer ) Tj /F1 10 Tf (de la llibreria python, servir fitxers de forma gen\350rica via web, servir un portal) Tj T* 0 Tw (web dissenyat amb HTML i configurar serveis web amb noms virtuals.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 608.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Tasques) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 578.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 3.057984 Tw (La primera tasca que vam realitzar va ser crear una nova maquina virtual\(servidorWeb\) i la vam) Tj T* 0 Tw (configurar correctament per tal que es pugues comunicar correctament a la nostra xarxa.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 548.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 1.257045 Tw (Seguidament a la maquina proves i servidorWeb hi vam instalar els paquets wget, firefox i xauth. A la) Tj T* 0 Tw (servidorWeb a m\351s a m\351s hi vam instalar Apache.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 506.0236 cm
+q
+BT 1 0 0 1 0 26 Tm 3.013828 Tw 12 TL /F1 10 Tf 0 0 0 rg (Per provar el servidor http simple de python, vam executar ) Tj /F2 10 Tf (python -m SimpleHTTPServer 8000) Tj /F1 10 Tf (.) Tj T* 0 Tw 1.748735 Tw (Executant aquest python, ens esta servint la nostra web al port 8000. Accedint a la nostraIP:8000 la) Tj T* 0 Tw (podem consultar.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 476.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .495542 Tw (Tot seguit, com que utilitzavem IP's en lloc de noms, vam decidir modificar el nostre fitxer de la maquina) Tj T* 0 Tw (dns. A continuaci\363 podem veure com va quedar modificat al finalitzar la pr\340ctica\(db.g7.asi.itic.cat\).) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 82.82362 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 384 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 362 Tm /F4 10 Tf 12 TL ($TTL 5H) Tj T* (g7.asi.itic.cat.        IN      SOA     ns.g7.asi.itic.cat.) Tj T* (                                        adriiauguets.gmail.com. \() Tj T* (                     2014011201      ; serial) Tj T* (                     7200            ; Refresh) Tj T* (                     3600            ; Retry) Tj T* (                     1W              ; Expire) Tj T* (                     1W \)            ; Negative Cache TTL) Tj T* (;servidors de noms) Tj T* (g7.asi.itic.cat.        IN      NS      ns.g7.asi.itic.cat.) Tj T* (g7.asi.itic.cat.        IN      NS      ns2.g7.asi.itic.cat.) Tj T*  T* (;Registres A) Tj T* (ns.g7.asi.itic.cat.     IN      A       172.20.7.4) Tj T* (ns2.g7.asi.itic.cat.    IN      A       172.20.7.5) Tj T* (g7.asi.itic.cat.        IN      A       172.20.7.12) Tj T*  T*  T* (mail                    IN      A       172.20.7.6) Tj T* (proves                  IN      A       172.20.7.11) Tj T* (pmail                   IN      A       172.20.7.15) Tj T* (adria                   IN      A       172.20.7.1) Tj T*  T* (;Registres MX) Tj T* (ns.g7.asi.itic.cat.     IN      MX      10      ns.g7.asi.itic.cat.) Tj T* (g7.asi.itic.cat.        IN      MX      10      mail.g7.asi.itic.cat.) Tj T* (proves.g7.asi.itic.cat. IN      MX      10      proves.g7.asi.itic.cat.) Tj T* (mail.g7.asi.itic.cat.   IN      MX      10      mail.g7.asi.itic.cat.) Tj T*  T*  T* (pmail.g7.asi.itic.cat.  IN      MX      10      pmail.g7.asi.itic.cat.) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+ 
+endstream
+endobj
+15 0 obj
+<< /Length 3033 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 691.8236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 72 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 50 Tm /F4 10 Tf 12 TL  T* (;Canonical Name Record) Tj T* (web.g7.asi.itic.cat.    IN      CNAME   g7.asi.itic.cat.) Tj T* (www.g7.asi.itic.cat.    IN      CNAME   g7.asi.itic.cat.) Tj T* (form.g7.asi.itic.cat.   IN      CNAME   g7.asi.itic.cat.) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 647.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL .573516 Tw (Tot seguit vam configurar el servei Apache. Primer vam posar els fitxers HTML dins el directori que vam) Tj T* 0 Tw 5.456412 Tw (crear /var/html/webg7 i vam configurar el fitxer que ens demana la practica de la seg\374ent) Tj T* 0 Tw (manera.\(/etc/apache2/sites-enabled/practweb.conf\)) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 302.6236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 336 re B*
+Q
+q
+BT 1 0 0 1 0 314 Tm 12 TL /F4 10 Tf 0 0 0 rg (<) Tj (VirtualHost *:80) Tj (>) Tj  T* (     ServerAdmin web@mail.g7.asi.itic.cat) Tj T* (     ServerName g7.asi.itic.cat) Tj T* (     ServerAlias www.g7.asi.itic.cat) Tj T*  T* (     DocumentRoot /var/www/webg7/) Tj T*  T* (     Alias /docshtml/ /var/www/htmlwebproves/) Tj T*  T* (     ErrorLog ${APACHE_LOG_DIR}/error.log) Tj T* (     LogLevel warn) Tj T* (     CustomLog ${APACHE_LOG_DIR}/access.log combined) Tj T*  T* (     Redirect /docspy http://g7.asi.itic.cat:8000/) Tj T*  T* (     ProxyPass /docsprox http://g7.asi.itic.cat:8000/) Tj T* (     ProxyPassReverse /docsprox http://g7.asi.itic.cat:8000/) Tj T*  T* (<) Tj (/VirtualHost) Tj (>) Tj  T*  T* (<) Tj (VirtualHost *:80) Tj (>) Tj  T* (     ServerName form.g7.asi.itic.cat) Tj T* (     #ServerAlias www.g7.asi.itic.cat) Tj T* (     DocumentRoot /var/www/webg7/) Tj T* (     DirectoryIndex formulari.html) Tj T*  T* (<) Tj (/VirtualHost) Tj (>) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 270.6236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .786098 Tw (Com es pot apreciar, vam configurar tot el que ens demana la practica. Alias, redirecci\363, proxy i que es) Tj T* 0 Tw (serveixi el formulari.html quan introdueixis form.g7.asi.itic.cat.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 252.6236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Ens va ser d'ajuda observar el fitxer /var/log/apache2/error.log per avan\347ar en la practica.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 210.6236 cm
+q
+BT 1 0 0 1 0 26 Tm 1.647318 Tw 12 TL /F1 10 Tf 0 0 0 rg (Per tal de comprovar el correcte funcionament, desde la m\340quina mare, on hi tenim interficie gr\340fica,) Tj T* 0 Tw .417674 Tw (escrivirem en el terminal la comanda ) Tj /F3 10 Tf (ssh -X ubuntu@g7.asi.itic.cat firefox) Tj /F1 10 Tf (, s'ens executara un explorador) Tj T* 0 Tw (firefox i alla hi podrem escriure les direccions i comprovar el funcionament.) Tj T* ET
+Q
+Q
+ 
+endstream
+endobj
+16 0 obj
+<< /Nums [ 0 17 0 R 1 18 0 R ] >>
+endobj
+17 0 obj
+<< /S /D /St 1 >>
+endobj
+18 0 obj
+<< /S /D /St 2 >>
+endobj
+xref
+0 19
+0000000000 65535 f
+0000000075 00000 n
+0000000139 00000 n
+0000000249 00000 n
+0000000364 00000 n
+0000000482 00000 n
+0000000590 00000 n
+0000000799 00000 n
+0000001008 00000 n
+0000001116 00000 n
+0000001435 00000 n
+0000001512 00000 n
+0000001623 00000 n
+0000001734 00000 n
+0000001803 00000 n
+0000006128 00000 n
+0000009218 00000 n
+0000009271 00000 n
+0000009308 00000 n
+trailer
+<< /ID 
+ % ReportLab generated PDF document -- digest (http://www.reportlab.com)
+ [(Ei\245\233f\257\256y>\201i\334K_^\303) (Ei\245\233f\257\256y>\201i\334K_^\303)]
+ /Info 9 0 R /Root 8 0 R /Size 19 >>
+startxref
+9345
+%%EOF

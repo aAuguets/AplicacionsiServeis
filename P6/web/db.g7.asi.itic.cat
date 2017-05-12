@@ -1,0 +1,38 @@
+$TTL 5H
+g7.asi.itic.cat.        IN      SOA     ns.g7.asi.itic.cat.     adriiauguets.gmail.com. (
+                        2014011201      ; serial
+                        7200            ; Refresh
+                        3600            ; Retry
+                        1W              ; Expire
+                        1W )            ; Negative Cache TTL
+;servidors de noms
+g7.asi.itic.cat.        IN      NS      ns.g7.asi.itic.cat.
+g7.asi.itic.cat.        IN      NS      ns2.g7.asi.itic.cat.
+
+;Registres A
+ns.g7.asi.itic.cat.     IN      A       172.20.7.4
+ns2.g7.asi.itic.cat.    IN      A       172.20.7.5
+g7.asi.itic.cat.        IN      A       172.20.7.12
+
+
+mail                    IN      A       172.20.7.6
+proves                  IN      A       172.20.7.11
+pmail                   IN      A       172.20.7.15
+adria                   IN      A       172.20.7.1
+
+;Registres MX
+ns.g7.asi.itic.cat.     IN      MX      10      ns.g7.asi.itic.cat.
+g7.asi.itic.cat.        IN      MX      10      mail.g7.asi.itic.cat.
+proves.g7.asi.itic.cat. IN      MX      10      proves.g7.asi.itic.cat.
+mail.g7.asi.itic.cat.   IN      MX      10      mail.g7.asi.itic.cat.
+
+
+pmail.g7.asi.itic.cat.  IN      MX      10      pmail.g7.asi.itic.cat.
+
+;Canonical Name Record
+web.g7.asi.itic.cat.    IN      CNAME   g7.asi.itic.cat.
+www.g7.asi.itic.cat.    IN      CNAME   g7.asi.itic.cat.
+form.g7.asi.itic.cat.   IN      CNAME   g7.asi.itic.cat.
+
+
+
